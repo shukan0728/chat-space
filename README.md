@@ -44,6 +44,7 @@ Things you may want to cover:
 |password|varchar|null: false|
 
 ### Association
+_ has_many :members
 _ has_many :groups, through: :members
 _ has_many :messages
 
@@ -56,6 +57,7 @@ _ has_many :messages
 
 
 ### Association
+_ has_many :members
 _ has_many :users, through: :members
 _ has_many :messages
 
@@ -71,7 +73,7 @@ _ has_many :messages
 |updated_at|datetime|null: false|
 
 ### Association
-_ belongs_to :users
+_ belongs_to :user
 _ belongs_to :group
 
 
