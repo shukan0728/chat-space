@@ -52,7 +52,7 @@ _ has_many :messages
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null:false|
+|name|string|null:false|
 |user_id|integre|null: false, foreign_key: true|
 
 
@@ -69,8 +69,7 @@ _ has_many :messages
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 |text|text|-|
-|created_at|datetime|null: false|
-|updated_at|datetime|null: false|
+|image|text|-|
 
 ### Association
 _ belongs_to :user
