@@ -53,14 +53,11 @@ _ has_many :messages
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null:false|
-|user|references|null: false, foreign_key: true|
-
 
 ### Association
 _ has_many :members
 _ has_many :users, through: :members
 _ has_many :messages
-
 
 
 ## messageテーブル
