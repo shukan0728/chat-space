@@ -27,7 +27,7 @@
     }
     &__right {
      float: right;
-        &__edit-botton {
+      &__edit-botton {
           display: inline-block;
           text-decoration: none;
           border: solid 1px;
@@ -78,7 +78,6 @@
     }
   }
 
-
   .form {
   width: 100%;
   height: 90px;
@@ -118,4 +117,3 @@
        line-height: 50px;
     }
   }
-

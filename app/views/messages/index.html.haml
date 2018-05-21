@@ -9,11 +9,7 @@
         %i.fa.fa-gear
 
     .nav-contents
-      .nav-contents__content
-        .nav-contents__content__group aaa
-        %p
-        .nav-contents__content__messages nice to meet you
-
+      = render partial: "nav-contents"
 
   .right-container
 
@@ -23,12 +19,9 @@
         .chat-header__left__member Member: natsumi
       .chat-header__right
         .chat-header__right__edit-botton Edit
+
     .chat-contents
-      .chat-contents__content
-        .chat-contents__content__info
-          .chat-contents__content__info__name natsumi
-          .chat-contents__content__info__date 2018/05/09
-        .chat-contents__content__message nice to meet you
+      = render partial: "chat-contents"
 
     .form
       .form__message-box
