@@ -1,0 +1,52 @@
+.left-container {
+ width: 300px;
+ height: 100vh;
+ margin: 0 ;
+ box-sizing: border-box;
+ color: white;
+ float: left;
+ overflow: scroll;
+}
+
+  .nav-header {
+    height: 100px;
+    background-color: $cobalt_blue;
+    line-height: 100px;
+    padding: 0 20px;
+    margin: 0;
+    box-sizing: border-box;
+    display: block;
+    &__name {
+      font-size: 16px;
+      font-weight: bold;
+      float: left;
+      }
+    &__lists {
+      float: right;
+      }
+  }
+
+  .nav-contents {
+    height: calc(100vh - 100px);
+    background-color: $dark-blue;
+    padding:  20px;
+    box-sizing: border-box;
+    display: block;
+    &__content {
+     height: 100px;
+     box-sizing: border-box;
+     display: block;
+     padding: 20px 0;
+       &__group {
+        font-size: 15px;
+        display: inline-block;
+       }
+       &__messages {
+        font-size: 11px;
+        display: inline-block;
+       }
+    }
+  }
+
+
+
