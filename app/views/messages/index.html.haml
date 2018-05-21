@@ -1,0 +1,30 @@
+.container
+
+  .left-container
+
+    .nav-header
+      .nav-header__name natsumi
+      .nav-header__lists
+        %i.fa.fa-edit
+        %i.fa.fa-gear
+
+    .nav-contents
+      = render partial: "nav-contents"
+
+  .right-container
+
+    .chat-header
+      .chat-header__left
+        .chat-header__left__title aaa
+        .chat-header__left__member Member: natsumi
+      .chat-header__right
+        .chat-header__right__edit-botton Edit
+
+    .chat-contents
+      = render partial: "chat-contents"
+
+    .form
+      .form__message-box
+      %label.form__message-mask
+        %i.fa.fa-image
+      .form__send-botton send
