@@ -22,7 +22,11 @@
         font-size: 12px;
         display: flex;
         color: $white-gray;
-        margin-top: 15px
+        margin-top: 15px;
+        .member {
+          display: inline-block;
+          padding-right: 5px;
+        }
        }
     }
     &__right {
@@ -37,7 +41,7 @@
           height: 40px;
           line-height: 40px;
           font-size: 16px;
-           box-sizing: border-box;
+          box-sizing: border-box;
          }
      }
   }
@@ -49,6 +53,7 @@
    box-sizing: border-box;
    padding: 16px 40px 0;
    margin: 0;
+   overflow: scroll;
     &__content {
     margin: 20px 0 ;
     background-color: $white;

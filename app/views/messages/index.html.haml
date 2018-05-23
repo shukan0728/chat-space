@@ -3,20 +3,26 @@
   .left-container
 
     .nav-header
-      .nav-header__name natsumi
-      .nav-header__lists
-        %i.fa.fa-edit
-        %i.fa.fa-gear
-
+      %h3.nav-header__name
+        = current_user.name
+      %ul.nav-header__lists
+        %li.icon
+          = link_to new_group_path do
+            = fa_icon 'pencil-square-o', class:'icon'
+        %li.icon
+          = link_to edit_user_path(current_user) do
+            =fa_icon 'cog', class: 'icon'
     .nav-contents
-      = render partial: "nav-contents"
+      - current_user.groups.each do |group|
+      = render partial: "shared/nav-contents"
 
   .right-container
 
     .chat-header
+
       .chat-header__left
-        .chat-header__left__title aaa
-        .chat-header__left__member Member: natsumi
+        .chat-header__left__title
+        .chat-header__left__member
       .chat-header__right
         .chat-header__right__edit-botton Edit
 

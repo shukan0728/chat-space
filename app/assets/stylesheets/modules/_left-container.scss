@@ -24,26 +24,34 @@
     &__lists {
       float: right;
       }
+      .icon{
+        display: inline;
+        color: $white;
+        font-size: $side_header_font;
+      }
   }
 
   .nav-contents {
     height: calc(100vh - 100px);
     background-color: $dark-blue;
-    padding:  20px;
+    padding: 0 20px;
     box-sizing: border-box;
     display: block;
+    color: $white;
     &__content {
      height: 100px;
      box-sizing: border-box;
      display: block;
      padding: 20px 0;
-       &__group {
+     color: $white;
+      &__group {
         font-size: 15px;
-        display: inline-block;
+        color: $white;
        }
-       &__messages {
+      &__messages {
         font-size: 11px;
-        display: inline-block;
+        color: $white;
+        margin-top: 5px;
        }
     }
   }
