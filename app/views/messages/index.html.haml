@@ -21,13 +21,21 @@
     .chat-header
 
       .chat-header__left
-        .chat-header__left__title
-        .chat-header__left__member
+        .chat-header__left__name
+          = @group.name
+        .chat-hedart__left__member
+          .title Member :
+          .group-member
+            - @group.users.each do |user|
+              = user.name
+
+
       .chat-header__right
-        .chat-header__right__edit-botton Edit
+        .chat-header__right__edit-botton
+          = link_to "Edit", edit_group_path(@group.id), class:'edit-btn'
 
     .chat-contents
-      = render partial: "chat-contents"
+      = render partial: "chat-contents", collection: @messages, as: 'message'
 
     .form
       = form_for [@group, @message] do |f|

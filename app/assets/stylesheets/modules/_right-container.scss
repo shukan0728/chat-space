@@ -13,36 +13,48 @@
    box-sizing: border-box;
     &__left {
      float: left;
-       &__title{
+       &__name{
         font-size: 20px;
         color: black;
         margin-top: 35px;
        }
-       &__member{
-        font-size: 12px;
-        display: flex;
-        color: $white-gray;
+       &__member {
+        display: inline-block;
         margin-top: 15px;
-        .member {
-          display: inline-block;
-          padding-right: 5px;
-        }
        }
+         .title {
+           display: inline-block;
+           font-size: 12px;
+           padding-right: 5px;
+           color: $white-gray;
+           float: left;
+          }
+         .group-member {
+           display: inline-block;
+           display: flex;
+           float: left;
+           font-size: 12px;
+           color: $white-gray;
+         }
     }
     &__right {
      float: right;
       &__edit-botton {
-          display: inline-block;
-          text-decoration: none;
-          border: solid 1px;
-          color: $sky-blue;
-          padding: 0 20px;
-          margin-top: 28px;
-          height: 40px;
-          line-height: 40px;
-          font-size: 16px;
-          box-sizing: border-box;
+        display: inline-block;
+        text-decoration: none;
+        border: solid 1px;
+        color: $sky-blue;
+        padding: 0 20px;
+        margin-top: 28px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        box-sizing: border-box;
          }
+        .edit-btn {
+          text-decoration: none;
+          color: $sky-blue;
+        }
      }
   }
 
@@ -59,7 +71,7 @@
     background-color: $white;
     width: 100%;
     box-sizing: border-box;
-      &__info {
+      &__upper {
          margin-bottom: 10px;
         &__name{
           font-size: 16px;
@@ -74,7 +86,7 @@
           float: left;
         }
       }
-      &__message {
+      &__lower {
           font-size: 14px;
           color: $off-black;
           clear: both;
