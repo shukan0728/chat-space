@@ -14,7 +14,7 @@
             =fa_icon 'cog', class: 'icon'
     .nav-contents
       - current_user.groups.each do |group|
-      = render partial: "shared/nav-contents"
+        = render partial: "shared/nav-contents", collection: current_user.groups, as: 'group'
 
   .right-container
 
@@ -30,7 +30,11 @@
       = render partial: "chat-contents"
 
     .form
-      .form__message-box
-      %label.form__message-mask
-        %i.fa.fa-image
-      .form__send-botton send
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+
