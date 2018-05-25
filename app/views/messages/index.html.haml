@@ -3,28 +3,46 @@
   .left-container
 
     .nav-header
-      .nav-header__name natsumi
-      .nav-header__lists
-        %i.fa.fa-edit
-        %i.fa.fa-gear
-
+      %h3.nav-header__name
+        = current_user.name
+      %ul.nav-header__lists
+        %li.icon
+          = link_to new_group_path do
+            = fa_icon 'pencil-square-o', class:'icon'
+        %li.icon
+          = link_to edit_user_path(current_user) do
+            =fa_icon 'cog', class: 'icon'
     .nav-contents
-      = render partial: "nav-contents"
+      - current_user.groups.each do |group|
+        = render partial: "shared/nav-contents", collection: current_user.groups, as: 'group'
 
   .right-container
 
     .chat-header
+
       .chat-header__left
-        .chat-header__left__title aaa
-        .chat-header__left__member Member: natsumi
+        .chat-header__left__name
+          = @group.name
+        .chat-hedart__left__member
+          .title Member :
+          .group-member
+            - @group.users.each do |user|
+              = user.name
+
+
       .chat-header__right
-        .chat-header__right__edit-botton Edit
+        .chat-header__right__edit-botton
+          = link_to "Edit", edit_group_path(@group.id), class:'edit-btn'
 
     .chat-contents
-      = render partial: "chat-contents"
+      = render partial: "chat-contents", collection: @messages, as: 'message'
 
     .form
-      .form__message-box
-      %label.form__message-mask
-        %i.fa.fa-image
-      .form__send-botton send
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+
