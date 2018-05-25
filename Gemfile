@@ -58,6 +58,7 @@ gem 'font-awesome-rails'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
+<<<<<<< HEAD
 end
 
 
@@ -69,3 +70,14 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.0'
   gem 'faker'
 end
+=======
+gem 'rspec-rails'
+gem 'factory_girl_rails', "~> 4.4.1"
+end
+
+
+group :test do
+  gem 'faker'
+end
+
+>>>>>>> master

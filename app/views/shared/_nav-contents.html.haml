@@ -1,0 +1,6 @@
+.nav-contents__content
+  = link_to group_messages_path(group) do
+    %p.nav-contents__content__group
+      = group.name
+    %p.nav-contents__content__messages
+      = group.show_last_message

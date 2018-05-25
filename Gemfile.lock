@@ -39,7 +39,11 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+<<<<<<< HEAD
     bcrypt (3.1.12)
+=======
+    bcrypt (3.1.11)
+>>>>>>> master
     bindex (0.5.0)
     builder (3.2.3)
     byebug (10.0.2)
@@ -57,10 +61,17 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
+<<<<<<< HEAD
     devise (4.4.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0, < 6.0)
+=======
+    devise (4.3.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5.2)
+>>>>>>> master
       responders
       warden (~> 1.2.3)
     diff-lcs (1.3)
@@ -125,7 +136,11 @@ GEM
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
+<<<<<<< HEAD
     pry (0.11.3)
+=======
+    pry (0.11.1)
+>>>>>>> master
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     pry-rails (0.3.6)
@@ -242,7 +257,11 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   erb2haml
+<<<<<<< HEAD
   factory_girl_rails (~> 4.0)
+=======
+  factory_girl_rails (~> 4.4.1)
+>>>>>>> master
   faker
   font-awesome-rails
   haml-rails
@@ -254,8 +273,12 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.0)
   rails (~> 5.0.1)
+<<<<<<< HEAD
   rails-controller-testing
   rspec-rails (~> 3.5)
+=======
+  rspec-rails
+>>>>>>> master
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
