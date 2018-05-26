@@ -49,20 +49,19 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'haml-rails'
-gem 'erb2haml'
-gem 'font-awesome-rails'
-gem 'devise'
-gem 'carrierwave'
-gem 'mini_magick'
+  gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+  gem 'erb2haml'
+  gem 'font-awesome-rails'
+  gem 'devise'
+  gem 'carrierwave'
+  gem 'mini_magick'
 end
 
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'pry-rails'
+  gem 'haml-rails'
   gem 'rspec-rails', '~> 3.5'
   gem 'rails-controller-testing'
   gem 'factory_girl_rails', '~> 4.0'
