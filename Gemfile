@@ -58,12 +58,17 @@ gem 'font-awesome-rails'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'rspec-rails'
-gem 'factory_girl_rails', "~> 4.4.1"
 end
 
-
-group :test do
+group :development, :test do
+  gem 'byebug', platform: :mri
+  gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'rails-controller-testing'
+  gem 'factory_girl_rails', '~> 4.0'
   gem 'faker'
+  gem 'carrierwave'
+  gem 'mini_magick'
 end
+
 
