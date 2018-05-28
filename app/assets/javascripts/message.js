@@ -42,12 +42,10 @@ $(function(){
       .done(function(data){
         var html = buildHTML(data);
         $('.chat-contents').append(html);
-        console.log(html)
         $('#new_message')[0].reset();
         $('.form__submit').prop('disabled', false);
         scroll()
       })
-
       .fail(function(){
         alert(`error`);
       })
