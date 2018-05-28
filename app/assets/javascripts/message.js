@@ -22,6 +22,9 @@ $(function(){
           </div>`;
           return html;
     }
+    function scroll() {
+      $('.chat-contents').animate({scrollTop: $('.chat-contents')[0].scrollHeight});
+    }
 
   $(function(){
     $('#new_message').on('submit', function(e){
@@ -40,11 +43,11 @@ $(function(){
         var html = buildHTML(data);
         $('.chat-contents').append(html);
         console.log(html)
-        $('.form__message').val("");
-        $('.form__mask__image').val("");
+        $('#new_message')[0].reset();
         $('.form__submit').prop('disabled', false);
-        $('.chat-contents').animate({scrollTop: $('.chat-contents')[0].scrollHeight});
+        scroll()
       })
+
       .fail(function(){
         alert(`error`);
       })
