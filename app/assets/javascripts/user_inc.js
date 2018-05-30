@@ -26,7 +26,9 @@ $(function() {
 
   $(function() {
     $("#user-search-field").on("keyup", function() {
+      $("user-search-field").empty();
       var input = $("#user-search-field").val();
+      if (input){
       $.ajax({
         type: 'GET',
         url: '/users',
@@ -46,6 +48,7 @@ $(function() {
       .fail(function(){
         alert("検索に失敗しました")
       })
+    }
     });
   });
 
@@ -61,6 +64,4 @@ $(function() {
     var id = $(this).data('user-id');
     $(`#chat-group-user-${id}`).remove();
   })
-
 });
-
