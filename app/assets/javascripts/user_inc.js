@@ -52,7 +52,6 @@ $(function() {
     });
   });
 
-    $(document).on('click','.user-search-add', function() {
     var id = $(this).data('user-id');
     var name = $(this).data('user-name');
     var insertHTML = buildHTML(id, name);
