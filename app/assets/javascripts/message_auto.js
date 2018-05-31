@@ -26,8 +26,6 @@ $(function(){
       $('.chat-contents').stop().animate({scrollTop: $('.chat-contents')[0].scrollHeight});
     }
 
-
-
   $(function(){
     $(function(){
       if (location.href.match(/\/groups\/\d+\/messages/)){
