@@ -1,4 +1,4 @@
-.chat-contents__content
+.chat-contents__content{"data-message-id": message.id}
   .chat-contents__content__upper
     .chat-contents__content__upper__name
       = message.user.name
@@ -8,4 +8,4 @@
     - if message.content.present?
       %p.chat-contents__content__lower__message
         = message.content
-    = image_tag message.image.url, class: 'lower__message__image' if message.image.present?
+        = image_tag message.image.url, class: 'lower__message__image' if message.image.present?

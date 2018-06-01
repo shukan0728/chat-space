@@ -27,28 +27,36 @@ $(function(){
     }
 
   $(function(){
-    $('#new_message').on('submit', function(e){
-      e.preventDefault();
-      var formData = new FormData(this);
-      var url = $(this).attr('action');
+    $(function(){
+      if (location.pathname.match(/\/groups\/\d+\/messages/)){
+        var interval = setInterval(update, 5000);
+      }
+    });
+    function update(){
+      if ($('.chat-contents__content')[0]){
+        var message_id = $(".chat-contents__content").last().data("message-id");
+      } else {
+        return false
+      }
       $.ajax({
-        url: url,
-        type: "POST",
-        data: formData,
-        dataType: 'json',
-        processData: false,
-        contentType: false
+        url: location.pathname,
+        type: "GET",
+        data: {id : message_id},
+        dataType: 'json'
       })
       .done(function(data){
-        var html = buildHTML(data);
-        $('.chat-contents').append(html);
-        $('#new_message')[0].reset();
-        $('.form__submit').prop('disabled', false);
-        scroll();
+        if (data.length){
+           data.forEach(function(message){
+           var html = buildHTML(message);
+            $('.chat-contents').append(html);
+            scroll()
+          })
+        }
       })
       .fail(function(){
-        alert(`error`);
+        alert('自動更新に失敗しました')
       })
-    });
+      clearInterval();
+    }
   });
 });
