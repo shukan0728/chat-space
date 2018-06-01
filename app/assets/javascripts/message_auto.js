@@ -28,14 +28,14 @@ $(function(){
 
   $(function(){
     $(function(){
-      if (location.href.match(/\/groups\/\d+\/messages/)){
-      setInterval(update, 5000);
+      if (location.pathname.match(/\/groups\/\d+\/messages/)){
+        var interval = setInterval(update, 5000);
       }
     });
     function update(){
       if ($('.chat-contents__content')[0]){
         var message_id = $(".chat-contents__content").last().data("message-id");
-      }else{
+      } else {
         return false
       }
       $.ajax({
@@ -46,16 +46,17 @@ $(function(){
       })
       .done(function(data){
         if (data.length){
-        $.each(data, function(i, data){
-          var html = buildHTML(data);
-        $('.chat-contents').append(html);
-        scroll()
-        })
-       }
-       })
+          $.each(data, function(i, data){
+            var html = buildHTML(data);
+            $('.chat-contents').append(html);
+            scroll()
+          })
+        }
+      })
       .fail(function(){
         alert('自動更新に失敗しました')
       })
+      clearInterval();
     }
   });
 });

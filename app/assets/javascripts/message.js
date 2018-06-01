@@ -23,7 +23,7 @@ $(function(){
           return html;
     }
     function scroll() {
-      $('.chat-contents').animate({scrollTop: $('.chat-contents')[0].scrollHeight});
+      $('.chat-contents').stop().animate({scrollTop: $('.chat-contents')[0].scrollHeight});
     }
 
   $(function(){
@@ -44,7 +44,7 @@ $(function(){
         $('.chat-contents').append(html);
         $('#new_message')[0].reset();
         $('.form__submit').prop('disabled', false);
-        scroll()
+        scroll();
       })
       .fail(function(){
         alert(`error`);
