@@ -11,7 +11,6 @@ def new
 end
 
 def create
-  binding.pry
   @group = Group.new(group_params)
   @group.users << current_user
   if @group.save
@@ -26,7 +25,6 @@ def edit
 end
 
 def update
-  # binding.pry
   if @group.update(group_params)
     redirect_to group_messages_path(@group), notice: 'グループを編集しました'
   else

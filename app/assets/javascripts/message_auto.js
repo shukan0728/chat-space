@@ -46,8 +46,8 @@ $(function(){
       })
       .done(function(data){
         if (data.length){
-          $.each(data, function(i, data){
-            var html = buildHTML(data);
+           data.forEach(function(message){
+           var html = buildHTML(message);
             $('.chat-contents').append(html);
             scroll()
           })

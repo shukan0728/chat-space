@@ -5,4 +5,3 @@ json.array! @add_messages do |message|
   json.created_at message.created_at
   json.id message.image
 end
-
