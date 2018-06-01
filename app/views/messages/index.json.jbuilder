@@ -3,5 +3,5 @@ json.array! @add_messages do |message|
   json.user_name message.user.name
   json.content message.content
   json.created_at message.created_at
-  json.id message.image
+  json.id message.image.url
 end
