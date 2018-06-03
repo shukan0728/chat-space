@@ -45,6 +45,7 @@ $(function(){
         dataType: 'json'
       })
       .done(function(data){
+      console.log(data);
         if (data.length){
            data.forEach(function(message){
            var html = buildHTML(message);
