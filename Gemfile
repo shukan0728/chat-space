@@ -27,6 +27,12 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+gem 'haml-rails'
+gem 'erb2haml'
+gem 'font-awesome-rails'
+gem 'devise'
+gem 'carrierwave'
+gem 'mini_magick'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -51,12 +57,6 @@ group :development do
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'haml-rails'
-gem 'erb2haml'
-gem 'font-awesome-rails'
-gem 'devise'
-gem 'carrierwave'
-gem 'mini_magick'
 gem 'rspec-rails'
 gem 'factory_girl_rails', "~> 4.4.1"
 end
