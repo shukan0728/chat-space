@@ -46,7 +46,7 @@ $(function(){
       })
       .done(function(data){
       console.log(data);
-        if (data.length){
+        if (data.length && data != undefined){
            data.forEach(function(message){
            var html = buildHTML(message);
             $('.chat-contents').append(html);
