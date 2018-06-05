@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+tmpcd tmplRails.application.routes.draw do
   devise_for :users
   root 'groups#index'
   resources :users, only: [:edit, :update, :index]
