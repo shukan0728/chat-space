@@ -45,12 +45,13 @@ $(function(){
         dataType: 'json'
       })
       .done(function(data){
-        console.log(data);
+           console.log(data);
         if (data == undefined){
           return false;
-        } else if(data.length){
-           data.forEach(function(message){
-           var html = buildHTML(message);
+        }
+        if (data.length){
+          data.forEach(function(message){
+          var html = buildHTML(message);
             $('.chat-contents').append(html);
             scroll()
           })
