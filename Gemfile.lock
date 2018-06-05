@@ -461,6 +461,7 @@ DEPENDENCIES
   factory_girl_rails (~> 4.4.1)
   faker
   fog
+  fog-aws
   font-awesome-rails
   haml-rails
   jbuilder (~> 2.5)
